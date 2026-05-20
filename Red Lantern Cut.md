@@ -18,7 +18,7 @@ The visual matches pinpointed the exact scene:
 * **Series:** *The Punisher* (or *Marvel's The Punisher*)
 * **Related Episode:** Season 1, Episode 10 (*"Virtue of the Vicious"*)
 
-![Google Lens Verification](image_e5418f.jpg)
+![Google Lens Verification](googleLens.png)
 
 ---
 
@@ -27,6 +27,8 @@ With the exact season and episode identified, I navigated to **VidBox** to locat
 
 I scrubbed through the episode until the background layout, lighting, and the actor's stance perfectly matched the challenge image. 
 * **Initial Timestamp Found:** 37:47
+
+![VidBox Scene Location](Netflix.jpg)
 
 ---
 
@@ -37,6 +39,8 @@ Knowing that the Netflix dynamic intro lasts exactly **6 seconds**, I subtracted
 
 **37:47 - 6 seconds = 37:41**
 
+![Exact Frame Proof](Jackpot.jpg)
+
 ---
 
 ## 🏁 Flag Submission
@@ -44,7 +48,7 @@ Knowing that the Netflix dynamic intro lasts exactly **6 seconds**, I subtracted
 Following the requested format `0xV01D{SeriesName_SXX_EXX_MM:SS}`, I sanitized the series naming conventions:
 
 * **First Try (with Publisher Prefix):** `0xV01D{Marvel'sThePunisher_S01_E10_37:41}` ❌ *Incorrect*
-* **Second Try (Clean Title):** `0xV01D{ThePunisher_S01_E10_37:41}`  *Correct*
+* **Second Try (Clean Title):** `0xV01D{ThePunisher_S01_E10_37:41}` 🟢 *Correct*
 
 ### Final Flag
 ```text
