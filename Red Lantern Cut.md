@@ -64,12 +64,12 @@ Streaming platform releases include modern animated network bumpers (such as the
 
 ## 🏁 Flag Submission
 
-Following the requested syntax wrapper `0xV01D{SeriesName_SXX_EXX_MM:SS}`, I sanitized the series naming conventions through a trial-and-error process:
+Following the requested format `0xV01D{SeriesName_SXX_EXX_MM:SS}`, I sanitized the series naming conventions through a trial-and-error process:
 
-* **First Try (With All Gathered Information):** Initially, I attempted to construct the flag utilizing every piece of metadata recovered from the OSINT phase, which included the full publisher network prefix:  
+* **First Try (With All Gathered Information):** Initially, I attempted to construct the flag utilizing every piece of metadata recovered from the OSINT phase, which included the full publisher prefix:  
   `0xV01D{Marvel'sThePunisher_S01_E10_37:41}` ❌ *Incorrect*
 
-* **Second Try (Sanitizing to Clean Title):** After the first attempt failed, I realized the validation script likely required a strict database index match for the media title. I decided to strip away the dynamic publisher branding context (`Marvel's`) and supply only the clean, core title of the series:  
+* **Second Try (Sanitizing to Clean Title):** After the first attempt failed, I realized the validation script likely required a strict database index match for the media title. I decided to remove the dynamic publisher branding context (`Marvel's`) and supply only the clean, core title of the series:  
   `0xV01D{ThePunisher_S01_E10_37:41}` 🟢 *Correct*
 
 ### Final Flag
