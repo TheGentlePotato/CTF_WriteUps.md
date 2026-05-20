@@ -9,6 +9,25 @@
 
 ---
 
+## 📜 Challenge Description
+
+> A single frame has been extracted from a publicly released television production. The image belongs to a serialized narrative universe and represents an exact moment captured within a continuous episodic storyline.
+>
+> Your objective is to perform full OSINT analysis on the provided frame and determine its exact original context.
+>
+> **You must identify:**
+> - The name of the series
+> - The season number
+> - The episode number
+> - The exact timestamp of the frame (mm:ss)
+> - The official title of this challenge
+>
+> All answers must be validated through reliable source matching and frame-level verification. Guessing is not acceptable.
+>
+> **SUBMISSION FORMAT:** > `0xV01D{SeriesName_SXX_EXX_MM:SS}`
+
+---
+
 ## 💻 Methodology
 
 ### Step 1: Initial Reconnaissance (Visual Search)
@@ -32,10 +51,10 @@ I scrubbed through the episode until the background layout, lighting, and the ac
 
 ---
 
-### Step 3: Calibrating the Time Offset
-Streaming platforms like Netflix include dynamic branding intros at the very beginning of the stream. For CTF challenges, these are typically stripped or differ from local reference media copies.
+### Step 3: Calibrating the Time Offset for Exact Original Context
+Because the challenge requirements explicitly demand the **exact original context** of the production frame rather than its modern streaming placement, platform-specific modifications must be omitted. 
 
-Knowing that the Netflix dynamic intro lasts exactly **6 seconds**, I subtracted this offset to find the raw video timestamp:
+Streaming platform releases include modern animated network bumpers (such as the standard **6-second** Netflix opening header) prefixed directly to the episodic timeline. Stripping this network intro offset yields the raw video timestamp of the definitive production master:
 
 **37:47 - 6 seconds = 37:41**
 
